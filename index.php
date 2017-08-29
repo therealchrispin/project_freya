@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="style/main.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src=""></script>
-  <script src="JS/login.js"></script>
+  <script src="JS/registerUser.js"></script>
 </head>
 <body>
   <div id="main">

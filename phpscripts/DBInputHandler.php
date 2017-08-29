@@ -9,8 +9,6 @@ class DBInputHandler
 
 	}
 
-
-
 	public function insertNewRowIntoUserTable()
 	{
 
