@@ -1,32 +1,30 @@
 $(document).ready(function(){
 
-/*$("#button").click(function() {
-  if(formDataisChecked){
+$("#button").click(function() {
     registerUser();
-    }
-});*/
+    console.log("aint nobody fucking with my click")
+});
 
 $(".password").keyup(function(event) {
   checkPasswordInput();
 });
 
-
-function fromDataisChecked() {
-  return true;
-}
-
 function registerUser(){
   var form_data = $("form").serialize();
+
+  console.log(form_data);
+
   $.post('/phpscripts/newUser.php',
         form_data,
         function(data) {
+
         $("#main").hide();
-        $("body").html("<h1> registration succesfull </h1>")
+        $("body").html("<h1> registration successfull </h1>")
   });
 }
 
 function checkPasswordInput(){
-  var firstPassword = $("#password").val();
+  var firstPassword = $('#password').val();
   var secondPassword = $("#second_password").val();
 
   if(secondPassword == firstPassword){

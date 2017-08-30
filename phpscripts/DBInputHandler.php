@@ -12,7 +12,6 @@ class DBInputHandler
 	public function insertNewRowIntoUserTable()
 	{
 
-		$connection = $this->getDBConnection();
 		$this->insertData();
 
 		$connection->close();
@@ -20,7 +19,7 @@ class DBInputHandler
 		return "DONE".$_POST["username"];
 	}
 
-	private function insertData(){
+	public function insertData(){
 		$connection = $this->getDBConnection();
 
 
@@ -33,11 +32,7 @@ class DBInputHandler
 		$password = password_hash($password, PASSWORD_DEFAULT);
 
 		$insert = "INSERT INTO User (username, firstname, lastname, age, password)
-							VALUES('$username',
-										'$firstname',
-										'$lastname',
-										$age,
-										'$password')";
+							VALUES( '$username', '$firstname', '$lastname',	 '$age','$password')";
 
 		if($connection->query($insert) === FALSE){
 			die($connection->error);

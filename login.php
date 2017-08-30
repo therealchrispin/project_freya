@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +13,7 @@ session_start();
       <h3>Login</h3>
       <input type="text" name="username" placeholder="username" />
       <input type="password" name="password" placeholder="password" />
-      <button id="submit">login</button>
+      <button type="button" id="button">login</button>
     </form>
   </div>
 </body>

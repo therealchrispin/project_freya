@@ -16,14 +16,14 @@ class UserLogger {
     $select = "SELECT password from User Where username='$username'";
     $password = $connection->query($select);
 
-    if(! empty($password)){
-      if(password_verify($password, $_POST["password"])){
+    if(!empty($password)){
+      if(password_verify($_POST["password"], $password)){
         $_SESSION["username"] = $username;
         $_SESSIOn["status"] = 1;
 
         echo "läuft bei dir amk";
       } else {
-        echo "du hast kein plan du amk";
+        echo "§";
       }
     }
 

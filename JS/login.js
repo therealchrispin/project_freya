@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-$("#submit").click(function(event) {
+$("#button").click(function(event) {
   logUserIn();
 });
 
@@ -13,5 +13,4 @@ function logUserIn(){
           console.log(data);
   });
 }
-
 });
